@@ -15,24 +15,65 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="409dp"
-            android:layout_height="729dp"
-            android:background="#1C1C1C"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_bg"
             android:orientation="vertical">
 
             <Space
+                android:id="@+id/sp1"
                 android:layout_width="match_parent"
-                android:layout_height="17dp" />
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/alegreya_sans_sc_bold"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/archivo"
                 android:text="All Songs"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/editTextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_search"
+                    android:backgroundTint="#D3CBCB"
+                    android:ems="10"
+                    android:foregroundTint="#D3AEAE"
+                    android:hint="Search song, artist, album"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:textColor="#252525"
+                    android:textColorHighlight="#252424"
+                    android:textColorHint="#595959"
+                    android:textColorLink="#191919" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:paddingStart="10dp"
+                    android:src="@drawable/baseline_search_24" />
+
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="21dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcvAllSongsView"

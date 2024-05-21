@@ -2,59 +2,79 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
     android:layout_height="wrap_content">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="384dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
         android:background="#00FDFDFD"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/rounded_rectangle" />
+
         <LinearLayout
-            android:layout_width="377dp"
+            android:layout_width="400dp"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
             android:layout_marginBottom="0dp"
             android:orientation="horizontal"
-            android:paddingVertical="12dp">
+            android:paddingVertical="15dp">
 
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imgSongArtwork"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginVertical="4dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="10dp"
+                app:shapeAppearanceOverlay="@style/RoundedCorners"
                 app:srcCompat="@android:drawable/ic_menu_gallery" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="255dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="12dp" />
+                    android:layout_height="6dp" />
 
                 <TextView
                     android:id="@+id/txtMainTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
                     android:text="Song Name"
-                    android:textColor="#FF94BD"
-                    android:textSize="16sp" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/txtMainSinger"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
                     android:text="Singer"
-                    android:textColor="#FF94BD" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -63,19 +83,21 @@
 
                     <TextView
                         android:id="@+id/txtMainAlbum"
-                        android:layout_width="wrap_content"
+                        android:layout_width="189dp"
                         android:layout_height="wrap_content"
                         android:text="Album"
-                        android:textColor="#FF94BD" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/txtMainTime"
-                        android:layout_width="193dp"
+                        android:layout_width="54dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Time"
-                        android:textAlignment="textEnd"
-                        android:textColor="#FF94BD" />
+                        android:textAlignment="viewStart"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -86,16 +108,5 @@
 
     </RelativeLayout>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_weight="1"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#C3004B"
-        android:backgroundTintMode="src_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
